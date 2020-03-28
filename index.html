@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetHouse - Accueil</title>
+    <link rel="icon" href="./assets/img/logo2.png">
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+</style>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a href="index.html"><img class="logo" src="./assets/img/w_logo.png" alt=""></a>
+            <ul class="navigation__navs">
+                <li class="navigation__item"><a href="./index.html">Accueil</a></li>
+                <li class="navigation__item"><a href="#">Location</a></li>
+                <li class="navigation__item"><a href="#">Vente</a></li>
+                <li class="navigation__item"><a href="">Annonce</a></li>
+                <li class="navigation__item"><a href="">A propos</a></li>
+            </ul>
+            <div class="connect">
+                <button>
+                    <i class="fa fa-user"></i>
+                    connexion
+                </button>
+            </div>
+        </nav>
+        <div class="banner__container">
+            <div class="banner__container__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit temporibus accusamus sint adipisci vitae cum.</p>
+            </div>
+            <div class="banner__container__form">
+                <form action="traitement.php" method="POST">
+                    <p>Trouver une maison</p>
+                    <div class="input_container">
+                        <div class="select">
+                            <select name="ville" id="ville">
+                                <option selected disabled>Ville</option>
+                                <option value="kin">Kinshasa</option>
+                                <option value="Kol">Kolwezi</option>
+                                <option value="Lik">Likasi</option>
+                                <option value="Lub">Lubumbashi</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <select name="quartier" id="quartier">
+                                <option selected disabled>Quartier</option>
+                                <option value="kin">Kinshasa</option>
+                                <option value="Kol">Kolwezi</option>
+                                <option value="Lik">Likasi</option>
+                                <option value="Lub">Lubumbashi</option>
+                            </select>
+                        </div>
+                        <input class="button" type="submit" value="Trouver">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="slide">
+            <div class="">
+                <div class="owl-carousel owl-theme">
+                    <div class="item" id="item">
+                        <a href="#">
+                            <img src="./assets/img/house1.jpg" alt="">
+                            <div class="item__catg">
+                                <b>Location</b>
+                            </div>
+                            <div class="item__hover">
+                                <table>
+                                    <tr>
+                                        <th>Ville :</th>
+                                        <td>Kinshasa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Quartier :</th>
+                                        <td>CPA/Mushie</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Avenue :</th>
+                                        <td>8 Konde</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Prix :</th>
+                                        <td>2000$/m</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item" id="item">
+                        <a href="#">
+                            <img src="./assets/img/banner/img2.jpg" alt="">
+                            <div class="item__catg">
+                                <b>Vente</b>
+                            </div>
+                            <div class="item__hover">
+                                <table>
+                                    <tr>
+                                        <th>Ville :</th>
+                                        <td>Lubumbashi</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Quartier :</th>
+                                        <td>Kasapa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Avenue :</th>
+                                        <td>10 Lubumbashi</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Prix :</th>
+                                        <td>250.000$</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc1">
+            <div class="bloc1__left"></div>
+            <div class="bloc1__right"></div>
+        </div>
+    </section>
+    <script src="./Js/jquery-3.3.1.min.js"></script>
+    <script src="./Js/owl.carousel.min.js"></script>
+    <script>
+        for(i=0; i<8; i++){
+            let a = document.getElementById("item"),
+            b = a.cloneNode(true);
+            a.parentNode.appendChild(b);
+        }
+    </script>
+    <script type="text/javascript">
+		$('.owl-carousel').owlCarousel({
+			loop:true,
+			margin:30,
+			nav:true,
+			autoplay:true,
+			autoplayTimeout:2000,
+			autoplayHoverPause:true,
+			responsive:{
+			0:{
+					items:1
+			},
+			600:{
+					items:3
+			},
+			1000:{
+					items:4
+			}
+			}
+		})
+	</script>
+</body>
+</html>

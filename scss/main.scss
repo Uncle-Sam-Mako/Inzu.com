@@ -1,0 +1,263 @@
+/*Ma feuille de style*/
+/*variables_start*/
+$first: white;
+$second: #eee;
+$third: #a00303;
+$text-primary: #646464;
+$shadow: 0px 0px 5px gray;
+@mixin transition($prop: all, $temps: 0.5s){
+    transition : $prop $temps ease
+}
+
+/*variables_end*/
+*{
+    margin: 0;
+    font:{
+        family: "Open sans"
+    }
+}
+html{
+    overflow-x: hidden;
+    color: $text-primary;
+    img{
+        width: 100%;
+    }
+}
+/*Button__start*/
+.button{
+    padding: 10px 25px;
+    background: $third;
+    color: $first;
+    cursor: pointer;
+    border:{
+        style: none;
+        radius: 10px;
+    }
+    @include transition();
+    &:hover{
+        background: $first;
+        color: $third;
+        box-shadow: $shadow;
+    }
+}
+/*Button_end*/
+/*banner*/
+.header{
+    width: 100%;
+    height: 500px;
+    background: url('../assets/img/banner/img2.jpg')center;
+    background-size: cover;
+    padding: 20px;
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .logo{
+            width: 150px;
+            height: auto;
+        }
+       &__navs{
+            list-style-type: none;
+            .navigation__item{
+                display: inline-block;
+                margin: 0px 20px;
+                a{
+                    color: $first;
+                    text-decoration: none;
+                    @include transition(opacity);
+                    &::after{
+                        content:"";
+                        display: block;
+                        padding: 3px 0px;
+                        border-bottom: 2px solid rgba(255, 255, 255, 0.212);
+                        width: 0%;
+                        @include transition(width);
+                    }
+                    &:hover{
+                        opacity: 0.6;
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .connect{
+            button{
+                background: transparent;
+                border: 2px solid $first;
+                border-radius: 20px;
+                color: $first;
+                font-size: 1em;
+                cursor: pointer;
+                @include transition;
+                &:hover{
+                    background: $first;
+                    color: $third;
+                }
+        }
+    }
+  }
+    .banner__container{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        &__text{
+            color: $first;
+            grid-row:2;
+            grid-column: 1;
+            font:{
+                family: 'Open sans';
+                size: 2em;
+                weight: bold;
+            }
+            z-index: 5;
+            top: 20px;
+            left: 20px;
+            margin: 0px 50px;
+        }
+        &__form{
+            background: $first;
+            box-shadow: $shadow;
+            grid-row: 2/4;
+            grid-column: 2;
+            border-radius: 50px;
+            width: 60%;
+            margin-left: 100px;
+            padding: 20px;
+            form{
+                text-align: center;
+                p{
+                    color: $shadow;
+                    font-weight: bold;
+                    width: max-content;
+                    margin: auto;
+                    &::after{
+                        content:"";
+                        display: block;
+                        margin: 10px auto;
+                        width: 50%;
+                        border-bottom: 2px solid $third;
+                    }
+                }
+                .input_container{
+                    .select{
+                        position: relative;
+                        height: 40px;
+                        width: 75%;
+                        overflow: hidden;
+                        border-radius: 30px;
+                        background: #eee;
+                        margin: 25px auto;
+                        cursor: pointer;
+                        &:hover::after{
+                            color: $third;
+                        }
+                        &::after {
+                            content: '\276F';
+                            position : absolute ;
+                            top: 20% ;
+                            right: 0 ;
+                            padding: 0 15px;
+                            background: #eee;
+                            pointer-events: none ;
+                            transform: rotate( 90deg);
+                            font-size : 1em;
+                            color: $shadow;
+                            
+                            }
+                        select{
+                            width: 100%;
+                            height: 100%;
+                            appearance: none;
+                            -moz-appearance: none;
+                            outline: 0;
+                            background: transparent;
+                            padding-left: 15px;
+                            border:{
+                                style: none;
+                                radius: 50px;
+                            };
+                            height: 40px;
+                            width: 300px;
+                            option{
+                                background: $first;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+.main{
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    .slide{
+        margin: auto;
+        .item{
+            width:300px;
+            a{
+                width: 300px;
+                position: relative;
+                display: block;
+                @include transition();
+                &:hover{
+                    box-shadow: $shadow ;
+                    .item__hover{
+                        height: 70%;
+                        table{
+                            visibility: visible;
+                            padding: 10px;
+                        }
+                    }
+                }
+                .item__hover{
+                    position: absolute;
+                    width: 100%;
+                    height: 0%;
+                    bottom: 0;
+                    @include transition();
+                    background: rgba(0, 0, 0, 0.637);
+                    color: $first;
+                    table{
+                        visibility: hidden;
+                        font-size: 0.8em;
+                        th{
+                            text-align: left;
+                        }
+                    }
+                }
+                .item__catg{
+                    position: absolute;
+                    width: max-content;
+                    top: 0%;
+                    right: 0%;
+                    font-size: 0.8em;
+                    padding: 5px 10px;
+                    background: $third;
+                    color: $first;
+                }
+            }
+        }
+    }
+}
+.bloc1{
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 500px;
+    &__left{
+        grid-row: 1;
+        grid-column: 1;
+        background-color: red;
+    }
+    &__right{
+        grid-row: 1;
+        grid-column: 2;
+        background-color: blue;
+    }
+}
