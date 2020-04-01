@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+<style>
+
 </style>
 <body>
     <header class="header">
@@ -36,9 +38,9 @@
             <div class="banner__container__form">
                 <form action="traitement.php" method="POST">
                     <p>Trouver une maison</p>
-                    <div class="input_container">
-                        <div class="select">
-                            <select name="ville" id="ville">
+                    <div class="">
+                        <div class="input input--style-2 input--select">
+                            <select class="input__bloc" name="ville" id="ville1">
                                 <option selected disabled>Ville</option>
                                 <option value="kin">Kinshasa</option>
                                 <option value="Kol">Kolwezi</option>
@@ -46,8 +48,8 @@
                                 <option value="Lub">Lubumbashi</option>
                             </select>
                         </div>
-                        <div class="select">
-                            <select name="quartier" id="quartier">
+                        <div class="input input--style-2 input--select">
+                            <select class="input__bloc" name="quartier" id="quartier1">
                                 <option selected disabled>Quartier</option>
                                 <option value="kin">Kinshasa</option>
                                 <option value="Kol">Kolwezi</option>
@@ -55,7 +57,7 @@
                                 <option value="Lub">Lubumbashi</option>
                             </select>
                         </div>
-                        <input class="button" type="submit" value="Trouver">
+                        <button class="button"><i class="fa fa-search"></i> Trouver</button>
                     </div>
                 </form>
             </div>
@@ -63,6 +65,7 @@
     </header>
     <section class="main">
         <div class="slide">
+            <h4 style="margin:15px">Annonces à la une</h4>
             <div class="">
                 <div class="owl-carousel owl-theme">
                     <div class="item" id="item">
@@ -125,8 +128,56 @@
             </div>
         </div>
         <div class="bloc1">
-            <div class="bloc1__left"></div>
+            <div class="bloc1__left">
+                <div class="bloc1__left__bloc">
+                    <p>Filtrer par: </p>
+                    <div class="input input--style-2 input--select">
+                        <select class="input__bloc" name="categories" id="categories">
+                            <option selected disabled>Catégorie</option>
+                            <option value="local">Local</option>
+                            <option value="maison">Maison</option>
+                        </select>
+                    </div>
+                    <div class="input input--style-2 input--select">
+                        <select class="input__bloc" name="ville" id="ville">
+                            <option selected disabled>Ville</option>
+                            <option value="kin">Kinshasa</option>
+                            <option value="Kol">Kolwezi</option>
+                            <option value="Lik">Likasi</option>
+                            <option value="Lub">Lubumbashi</option>
+                        </select>
+                    </div>
+                    <div class="input input--style-2 input--select">
+                        <select class="input__bloc" name="quartier" id="quartier">
+                            <option selected disabled>Quartier</option>
+                            <option value="kin">Kinshasa</option>
+                            <option value="Kol">Kolwezi</option>
+                            <option value="Lik">Likasi</option>
+                            <option value="Lub">Lubumbashi</option>
+                        </select>
+                    </div>
+                    <div class="x-large flex-input">
+                        <label for="room_nb" class="">Chambres :</label>
+                        <div>
+                            <input id="room_nb" type="number" class="input__bloc"  min="1" max="10">
+                        </div> 
+                    </div> 
+                    <div class="x-large flex-input">
+                        <label for="min_price" class="">Prix Min($) :</label>
+                        <div>
+                            <input id="min_price" type="number" class="input__bloc"  min="10">
+                        </div> 
+                    </div>
+                    <div class="x-large flex-input">
+                        <label for="min_price" class="">Prix Max($) :</label>
+                        <div>
+                            <input id="max_price" type="number" class="input__bloc"  min="10">
+                        </div> 
+                    </div>
+                </div>
+            </div>
             <div class="bloc1__right"></div>
+            </div>
         </div>
     </section>
     <script src="./Js/jquery-3.3.1.min.js"></script>
@@ -144,7 +195,7 @@
 			margin:30,
 			nav:true,
 			autoplay:true,
-			autoplayTimeout:2000,
+			autoplayTimeout:4000,
 			autoplayHoverPause:true,
 			responsive:{
 			0:{

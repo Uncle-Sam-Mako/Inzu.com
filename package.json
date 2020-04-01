@@ -7,5 +7,8 @@
     "sass": "sass --watch ./scss/main.scss:./css/style.css --style compressed"
   },
   "author": "uncle sam",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
