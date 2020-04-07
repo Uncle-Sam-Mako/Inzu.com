@@ -1,6 +1,62 @@
-/*Ma feuille de style*/
+/*My stylesheet
+========================================================*/
 
-/*variables_start*/
+/*Imported fonts
+=================*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Varela&family=Varela+Round&display=swap');
+/*===============*/
+
+/*Reset CSS(http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126 License: none (public domain)
+===========================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*=========================================================*/
+
+
+
+/*Variables
+=======================================*/
 $first: white;
 $second: #eee;
 $third: #a00303;
@@ -10,18 +66,23 @@ $shadow: 0px 0px 5px gray;
 @mixin transition($prop: all, $temps: 0.5s){
     transition : $prop $temps ease
 }
-/*variables_end*/
+$font-primary: 'Varela Round', sans-serif;
+$font-secondary: 'Varela', sans-serif;
+$font-third: 'Noto Sans', sans-serif;
+/*=======================================*/
 
-/*display classes*/
+/*display classes
+==================*/
 .d-b{
     display: block;
 }
 .d-ib{
     display: inline-block;
 }
-/*display classes*/
+/*===============*/
 
-/*Width classes*/
+/*Width classes
+=================*/
 .xx-small{
     width: 10%;
 }
@@ -46,7 +107,8 @@ $shadow: 0px 0px 5px gray;
 .full{
     width: 100%;
 }
-/*Width classes*/
+/*===============*/
+
 label{
     font:{
         size: 0.8em;
@@ -128,21 +190,19 @@ label{
 		align-self: center;
 		text-align: center;	
         display: block;
-        pdding: 0 1em;
+        padding: 0 1em;
     }
 }
-*{
-    margin: 0;
-    font:{
-        family: "Open sans"
-    }
-}
+
 html{
     overflow-x: hidden;
     color: $text-primary;
     img{
         width: 100%;
     }
+}
+html, button, input, select{
+    font-family: $font-primary;
 }
 /*Button__start*/
 .button{
@@ -184,7 +244,7 @@ html{
                 margin: 0px 20px;
                 a{
                     color: $first;
-                    font-size: 0.85em;
+                    font-size: 1em;
                     text-decoration: none;
                     @include transition(opacity);
                     &::after{
@@ -231,7 +291,7 @@ html{
             grid-row:2;
             grid-column: 1;
             font:{
-                family: 'Open sans';
+                family: $font_primary;
                 size: 2em;
                 weight: bold;
             }
@@ -253,7 +313,6 @@ html{
                 text-align: center;
                 p{
                     color: $shadow;
-                    font-weight: bold;
                     width: max-content;
                     margin: auto;
                     &::after{
@@ -315,6 +374,11 @@ html{
                     table{
                         visibility: hidden;
                         font-size: 0.8em;
+                        position: relative;
+                        bottom: 0;
+                        tr{
+                            margin: 20px;
+                        }
                         th{
                             text-align: left;
                         }
