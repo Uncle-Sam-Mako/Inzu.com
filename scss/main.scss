@@ -3,7 +3,7 @@
 
 /*Imported fonts
 =================*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Varela&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela&family=Varela+Round&display=swap');
 /*===============*/
 
 /*Reset CSS(http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126 License: none (public domain)
@@ -61,14 +61,17 @@ $first: white;
 $second: #eee;
 $third: #a00303;
 $fourth: gray;
+$fifth: #7aa9d4;
 $text-primary: #646464;
-$shadow: 0px 0px 5px gray;
+@mixin shadowing($x: 0px, $y: 0px, $blur: 5px, $color: gray) {
+    box-shadow: $x $y $blur $color;
+}
 @mixin transition($prop: all, $temps: 0.5s){
     transition : $prop $temps ease
 }
 $font-primary: 'Varela Round', sans-serif;
 $font-secondary: 'Varela', sans-serif;
-$font-third: 'Noto Sans', sans-serif;
+$font-third: 'Roboto', sans-serif;
 /*=======================================*/
 
 /*display classes
@@ -218,7 +221,7 @@ html, button, input, select{
     &:hover{
         background: $first;
         color: $third;
-        box-shadow: $shadow;
+        @include shadowing();
     }
 }
 /*Button_end*/
@@ -291,9 +294,8 @@ html, button, input, select{
             grid-row:2;
             grid-column: 1;
             font:{
-                family: $font_primary;
+                family: $font_third;
                 size: 2em;
-                weight: bold;
             }
             z-index: 5;
             top: 20px;
@@ -302,7 +304,7 @@ html, button, input, select{
         }
         &__form{
             background: $first;
-            box-shadow: $shadow;
+            @include shadowing;
             grid-row: 2/4;
             grid-column: 2;
             border-radius: 50px;
@@ -312,7 +314,7 @@ html, button, input, select{
             form{
                 text-align: center;
                 p{
-                    color: $shadow;
+                    color: $text-primary;
                     width: max-content;
                     margin: auto;
                     &::after{
@@ -347,15 +349,14 @@ html, button, input, select{
                 display: block;
                 img{
                     border-radius: 10px;
-                    box-shadow: 0px 0px 5px #747373;
                     @include transition();
+                    @include shadowing($color:#747373);
                 }
                 &:hover{
                     .item__hover{
                         height: 70%;
                         table{
                             visibility: visible;
-                            padding: 10px;
                         }
                     }
                     img{
@@ -376,11 +377,12 @@ html, button, input, select{
                         font-size: 0.8em;
                         position: relative;
                         bottom: 0;
-                        tr{
-                            margin: 20px;
-                        }
+                        padding: 20px;
+                        display: block;
                         th{
                             text-align: left;
+                            padding: 5px 15px;
+                            font-weight: bold;
                         }
                     }
                 }
@@ -400,6 +402,7 @@ html, button, input, select{
 }
 .bloc1{
     padding: 20px;
+    display: flex;
     &__left{
         display: inline-block;
         border-right: 1px solid $second;
@@ -431,5 +434,65 @@ html, button, input, select{
     &__right{
         width: 70%;
         display: inline-block;
+    }
+}
+.house-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 10px;
+    &__item{
+        width: 270px;
+        margin: 20px 10px;
+        border-radius: 5px;
+        padding-bottom: 30px;
+        @include transition();
+        &:hover{
+            @include shadowing($blur:15px, $color: #d4d4d4);
+        }
+        a{
+            color: $text-primary;
+            text-decoration: none;
+            font-family: $font-third;
+            font-size: 0.85em;
+        }
+        .house-image{
+            display: block;
+            img{
+                border-radius: 5px;
+            }
+        }
+        .house-infos{
+            padding: 10px;
+            li{
+                margin: 5px 0px;
+                &:nth-child(1){
+                    font-weight: bold;
+                }
+                &:nth-child(3){
+                    color: $third;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    sub{
+                        font-size: small;
+                    }
+                }
+            }
+
+        }
+    }
+}
+.msg-1{
+    border: 1px solid #eee;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    i{
+        margin: 0 10px;
+        display: inline-block;
+        color: $fifth;
+    }
+    p{
+        display: inline-block;
+        width: 80%;
     }
 }

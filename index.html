@@ -134,6 +134,13 @@
                     <div class="input input--style-2 input--select">
                         <select class="input__bloc" name="categories" id="categories">
                             <option selected disabled>Catégorie</option>
+                            <option value="for_rent">à louer</option>
+                            <option value="for_sale">à vendre</option>
+                        </select>
+                    </div>
+                    <div class="input input--style-2 input--select">
+                        <select class="input__bloc" name="categories" id="categories">
+                            <option selected disabled>Type</option>
                             <option value="local">Local</option>
                             <option value="maison">Maison</option>
                         </select>
@@ -176,7 +183,28 @@
                     </div>
                 </div>
             </div>
-            <div class="bloc1__right"></div>
+            <div class="bloc1__right">
+                <div>
+                    <div class="msg-1">
+                        <i class="fa fa-home fa-3x"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nostrum! Accusamus in consectetur fuga obcaecati odit illo, ipsam.</p>
+                    </div>
+                    <div class="house-container">
+                        <div class="house-container__item" id="item2">
+                            <a href="#">
+                                <span class="house-image">
+                                    <img src="./assets/img/house1.jpg" alt="">
+                                </span>
+                                <ul class="house-infos">
+                                    <li>Maison à Louer</li>
+                                    <li>Kinshasa, Rue Konde/CPA</li>
+                                    <li>860$<sub>/mois</sub> </li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -185,6 +213,11 @@
     <script>
         for(i=0; i<8; i++){
             let a = document.getElementById("item"),
+            b = a.cloneNode(true);
+            a.parentNode.appendChild(b);
+        }
+        for(i=0; i<5; i++){
+            let a = document.getElementById("item2"),
             b = a.cloneNode(true);
             a.parentNode.appendChild(b);
         }
