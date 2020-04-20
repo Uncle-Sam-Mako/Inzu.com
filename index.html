@@ -129,57 +129,66 @@
         </div>
         <div class="bloc1">
             <div class="bloc1__left">
-                <div class="bloc1__left__bloc">
-                    <p>Filtrer par: </p>
-                    <div class="input input--style-2 input--select">
-                        <select class="input__bloc" name="categories" id="categories">
-                            <option selected disabled>Catégorie</option>
-                            <option value="for_rent">à louer</option>
-                            <option value="for_sale">à vendre</option>
-                        </select>
+                <div class="bloc1__left__main">
+                    <div class="visualisation-mode">
+                        <ul>
+                            <li><a href="#" class="active">Liste</a></li>
+                            <li><a href="#">Carte</a></li>
+                        </ul>
                     </div>
-                    <div class="input input--style-2 input--select">
-                        <select class="input__bloc" name="categories" id="categories">
-                            <option selected disabled>Type</option>
-                            <option value="local">Local</option>
-                            <option value="maison">Maison</option>
-                        </select>
-                    </div>
-                    <div class="input input--style-2 input--select">
-                        <select class="input__bloc" name="ville" id="ville">
-                            <option selected disabled>Ville</option>
-                            <option value="kin">Kinshasa</option>
-                            <option value="Kol">Kolwezi</option>
-                            <option value="Lik">Likasi</option>
-                            <option value="Lub">Lubumbashi</option>
-                        </select>
-                    </div>
-                    <div class="input input--style-2 input--select">
-                        <select class="input__bloc" name="quartier" id="quartier">
-                            <option selected disabled>Quartier</option>
-                            <option value="kin">Kinshasa</option>
-                            <option value="Kol">Kolwezi</option>
-                            <option value="Lik">Likasi</option>
-                            <option value="Lub">Lubumbashi</option>
-                        </select>
-                    </div>
-                    <div class="x-large flex-input">
-                        <label for="room_nb" class="">Chambres :</label>
-                        <div>
-                            <input id="room_nb" type="number" class="input__bloc"  min="1" max="10">
+                    <div class="bloc1__left__main__container">
+                        <p>Filtrer par: </p>
+                        <div class="input input--style-2
+                        input--select">
+                            <select class="input__bloc" name="categories" id="categories">
+                                <option selected disabled>Catégorie</option>
+                                <option value="for_rent">à louer</option>
+                                <option value="for_sale">à vendre</option>
+                            </select>
+                        </div>
+                        <div class="input input--style-2 input--select">
+                            <select class="input__bloc" name="categories" id="categories">
+                                <option selected disabled>Type</option>
+                                <option value="local">Local</option>
+                                <option value="maison">Maison</option>
+                            </select>
+                        </div>
+                        <div class="input input--style-2 input--select">
+                            <select class="input__bloc" name="ville" id="ville">
+                                <option selected disabled>Ville</option>
+                                <option value="kin">Kinshasa</option>
+                                <option value="Kol">Kolwezi</option>
+                                <option value="Lik">Likasi</option>
+                                <option value="Lub">Lubumbashi</option>
+                            </select>
+                        </div>
+                        <div class="input input--style-2 input--select">
+                            <select class="input__bloc" name="quartier" id="quartier">
+                                <option selected disabled>Quartier</option>
+                                <option value="kin">Kinshasa</option>
+                                <option value="Kol">Kolwezi</option>
+                                <option value="Lik">Likasi</option>
+                                <option value="Lub">Lubumbashi</option>
+                            </select>
+                        </div>
+                        <div class="x-large flex-input">
+                            <label for="room_nb" class="">Chambres :</label>
+                            <div>
+                                <input id="room_nb" type="number" class="input__bloc"  min="1" max="10">
+                            </div> 
                         </div> 
-                    </div> 
-                    <div class="x-large flex-input">
-                        <label for="min_price" class="">Prix Min($) :</label>
-                        <div>
-                            <input id="min_price" type="number" class="input__bloc"  min="10">
-                        </div> 
-                    </div>
-                    <div class="x-large flex-input">
-                        <label for="min_price" class="">Prix Max($) :</label>
-                        <div>
-                            <input id="max_price" type="number" class="input__bloc"  min="10">
-                        </div> 
+                        <div class="x-large flex-input">
+                            <label for="min_price" class="">Prix Min($) :</label>
+                            <div>
+                                <input id="min_price" type="number" class="input__bloc"  min="10">
+                            </div> 
+                        </div>
+                        <div class="x-large flex-input">
+                            <label for="min_price" class="">Prix Max($) :</label>
+                            <div>
+                                <input id="max_price" type="number" class="input__bloc"  min="10">
+                            </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,8 +212,19 @@
                             </a>
                         </div>
                     </div>
+                    <p class="see-more"><a href="#">Voir plus <i class="fa fa-angle-right"></i></a></p>
                 </div>
             </div>
+        </div>
+        <div>
+            <div class="announce-banner">
+                <div class="announce-banner__container">
+                    <h4>Publier votre annonce sur Inzu.com</h4>
+                    <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum enim nam libero, vitae recusandae magni expedita necessitatibus repellat qui repudiandae quisquam impedit non eius labore quidem dolores ea similique ad.
+                    </p>
+                    <button class="i-button">Publier une annonce</button>
+                </div>
             </div>
         </div>
     </section>

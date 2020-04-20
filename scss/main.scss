@@ -67,7 +67,7 @@ $text-primary: #646464;
     box-shadow: $x $y $blur $color;
 }
 @mixin transition($prop: all, $temps: 0.5s){
-    transition : $prop $temps ease
+    transition : $prop $temps ease;
 }
 $font-primary: 'Varela Round', sans-serif;
 $font-secondary: 'Varela', sans-serif;
@@ -112,6 +112,34 @@ $font-third: 'Roboto', sans-serif;
 }
 /*===============*/
 
+button{
+    cursor: pointer;
+}
+
+.i-button{
+    background: $first;
+    color: $third;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 15px auto;
+    @include transition();
+    &:hover{
+        @include shadowing();
+        background: $third;
+        color: $first;
+    }
+}
+a{
+    text-decoration: none;
+}
+.see-more{
+    text-align: center;
+    color: $third;
+    a{
+        color:$fifth;
+    }
+}
 label{
     font:{
         size: 0.8em;
@@ -407,29 +435,51 @@ html, button, input, select{
         display: inline-block;
         border-right: 1px solid $second;
         width: 30%;
-        &__bloc{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            margin: 20px auto;
-            box-shadow: 0px 0px 15px #d3d3d3;
-            padding: 35px 10px;
-            .flex-input{
-                display:flex; 
-                align-items: center; 
-                justify-content: space-between; 
-                padding: 10px 0;
-            }
-            p{
-                font:{
-                    size: 0.8em;
-                    weight: bold;
+        &__main{
+            .visualisation-mode{
+                text-align: right;
+                li{
+                    display: inline-block;
+                    margin: 5px 10px;
+                    a{
+                        text-decoration: none;
+                        color: $third;
+                        font-size: 0.9em;
+                        padding: 15px 20px;
+                        border-radius: 10px;
+                        @include transition();
+                        &.active{
+                            background-color: $second;
+                        }
+                        &:hover{
+                            background-color: $second;
+                        }
+                    }
                 }
-                color: $third;
+            }
+            &__container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+                margin: 20px auto;
+                box-shadow: 0px 0px 15px #d3d3d3;
+                padding: 35px 10px;
+                .flex-input{
+                    display:flex; 
+                    align-items: center; 
+                    justify-content: space-between; 
+                    padding: 10px 0;
+                }
+                p{
+                    font:{
+                        size: 0.8em;
+                        weight: bold;
+                    }
+                    color: $third;
+                }
             }
         }
-
     }
     &__right{
         width: 70%;
@@ -494,5 +544,25 @@ html, button, input, select{
     p{
         display: inline-block;
         width: 80%;
+    }
+}
+.announce-banner{
+    height: 250px;
+    background: url('../assets/img/banner/img1.jpg')center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__container{
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        h4{
+            font-size: 1.6em;
+            font-weight: bold;
+            margin: 15px auto;
+        }
     }
 }
