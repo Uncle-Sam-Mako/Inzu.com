@@ -146,6 +146,9 @@ label{
     }
     margin: 0px 0px 10px 10px ;
 }
+input{
+    padding: 0 10px;
+}
 .input__bloc{
     height: 2.19em;
     border: 2px solid #eee;
@@ -551,7 +554,7 @@ html, button, input, select{
     background: url('../assets/img/banner/img1.jpg')center no-repeat;
     background-size: cover;
     padding: 20px;
-    margin: 20px auto;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -563,6 +566,127 @@ html, button, input, select{
             font-size: 1.6em;
             font-weight: bold;
             margin: 15px auto;
+        }
+    }
+}
+footer{
+    background: #1b1b1b;
+    .footer{
+        a{
+            color: $text-primary;
+            &:hover{
+                color: $second;
+            }
+        }
+        &-logo{
+            img{
+                width: 100px;
+            }
+            align-self: center;
+        }
+        &-links li{
+            margin: 15px auto;
+            &:first-child{
+                font-weight: bold;
+                text-transform : uppercase;
+                margin: 10px 0;
+            }
+        }
+        &-form{
+            legend{
+                font-weight: 600;
+                text-transform : uppercase;
+                margin: 10px 0;
+            }
+            .footer-input{
+                height: 40px;
+                background: white;
+                display: grid;
+                grid-template-columns: 1fr 30px;
+                grid-template-rows: 1;
+                input{
+                    grid-column: 1;
+                }
+                button{
+                    display: inline-block;
+                    color: $third;
+                    grid-column: 2;
+                    grid-row: 1;
+                    height: 100%;
+                    @include transition();
+                    &:hover{
+                        color: $second;
+                        background: $third;
+                    }
+                }
+                input, button{
+                    border: none;
+                    display: inline-block;
+                }
+            }
+        }
+        &__container{
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            color: white;
+            font-family: $font-third;
+            font-size: 0.9em;
+        }
+        &-social-links{
+            display: block;
+            width: max-content;
+            text-align: center;
+            margin: 15px auto;
+            font-size: 1.4em;
+            a{
+                margin: 0 15px;
+            }
+        }
+        &-contact{
+            display: block;
+            border: 1px solid #242424;
+            border-radius: 15px;
+            padding: 20px 0;
+            position: relative;
+            margin-top: 30px;
+            .phone{
+                font-size: 1.8em;
+                position: absolute;
+                top: -10px;
+                right: 43%;
+                background: #1b1b1b;
+                padding: 0 10px; 
+            }
+            ul{
+                margin: auto;
+                width: max-content;
+                li{
+                    color: $text-primary;
+                    margin: 10px 0;
+                    i{
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        padding: 10px 0;
+        text-align: center;
+        &:before{
+            content: "";
+            width: 70%;
+            display: block;
+            border-top: 1px solid #242424;
+            margin: 15px auto;
+        }
+        p{
+            display: inline-block;
+            &:first-child{
+                color: $third;
+            }
         }
     }
 }
