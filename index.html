@@ -8,311 +8,95 @@
     <link rel="stylesheet" href="./css/owl.carousel.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.css">
     <script src="https://kit.fontawesome.com/47fc11e9b5.js" crossorigin="anonymous"></script>
 </head>
 <style>
-
 </style>
-<body>
-    <header class="header">
-        <nav class="navigation">
-            <a href="index.html"><img class="logo" src="./assets/img/w-logo.png" alt=""></a>
-            <ul class="navigation__navs">
-                <li class="navigation__item"><a href="./index.html">Accueil</a></li>
-                <li class="navigation__item"><a href="#">Location</a></li>
-                <li class="navigation__item"><a href="#">Vente</a></li>
-                <li class="navigation__item"><a href="">Annonce</a></li>
-                <li class="navigation__item"><a href="">A propos</a></li>
-            </ul>
-            <div class="connect">
-                <button>
-                    <i class="fas fa-user"></i>
-                    connexion
-                </button>
+<body class="container-fluid">
+    <div id="loader-box">
+        <div class="loader-animation">
+    
+        </div>
+        <div class="bounce-shadow"></div>
+    </div>
+    <header class="header row">
+        <nav class="nav-box mx-auto my-3 col-lg-11">
+            <div class="nav-box-container px-2">
+                <div class="nav-logo col-2">
+                    <img src="./assets/img/d-logo.png" alt="">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#" class="nav-link">A propos</a></li>
+                        <li><a href="#" class="nav-link">Location</a></li>
+                        <li><a href="#" class="nav-link">Vente</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                        <li>
+                            <button class="nav-link font-weight-bold" id="find-button">
+                                <i class="fa fa-search"></i>
+                                Trouver une maison
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-connect">
+                    <button class="butn butn--primary">Connectez-vous</button>
+                </div>
             </div>
         </nav>
-        <div class="banner__container">
-            <div class="banner__container__text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit temporibus accusamus sint adipisci vitae cum.</p>
-            </div>
-            <div class="banner__container__form">
-                <form action="traitement.php" method="POST">
-                    <p>Trouver une maison</p>
-                    <div class="">
-                        <div class="input input--style-2 input--select">
-                            <select class="input__bloc" name="ville" id="ville1">
-                                <option selected disabled>Ville</option>
-                                <option value="kin">Kinshasa</option>
-                                <option value="Kol">Kolwezi</option>
-                                <option value="Lik">Likasi</option>
-                                <option value="Lub">Lubumbashi</option>
-                            </select>
-                        </div>
-                        <div class="input input--style-2 input--select">
-                            <select class="input__bloc" name="quartier" id="quartier1">
-                                <option selected disabled>Quartier</option>
-                                <option value="kin">Kinshasa</option>
-                                <option value="Kol">Kolwezi</option>
-                                <option value="Lik">Likasi</option>
-                                <option value="Lub">Lubumbashi</option>
-                            </select>
-                        </div>
-                        <button class="button"><i class="fa fa-search"></i> Trouver</button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </header>
-    <section class="main">
-        <div class="slide">
-            <h4 style="margin:15px">Annonces à la une</h4>
-            <div class="">
-                <div class="owl-carousel owl-theme">
-                    <div class="item" id="item">
-                        <a href="#">
-                            <img src="./assets/img/house1.jpg" alt="">
-                            <div class="item__catg">
-                                <b>Location</b>
-                            </div>
-                            <div class="item__hover">
-                                <table>
-                                    <tr>
-                                        <th>Ville :</th>
-                                        <td>Kinshasa</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Quartier :</th>
-                                        <td>CPA/Mushie</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Avenue :</th>
-                                        <td>8 Konde</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Prix :</th>
-                                        <td>2000$/m</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" id="item">
-                        <a href="#">
-                            <img src="./assets/img/banner/img2.jpg" alt="">
-                            <div class="item__catg">
-                                <b>Vente</b>
-                            </div>
-                            <div class="item__hover">
-                                <table>
-                                    <tr>
-                                        <th>Ville :</th>
-                                        <td>Lubumbashi</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Quartier :</th>
-                                        <td>Kasapa</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Avenue :</th>
-                                        <td>10 Lubumbashi</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Prix :</th>
-                                        <td>250.000$</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+    <div class="container my-5">
+        <div class="row banner">
+            <div class="banner-image col-lg-5">
+                <img src="./assets/img/house1.jpg" alt="">
+            </div>  
+            <div class="banner-text col px-5 py-2">
+                <p class="">Nous avons des milliers de maisons prêtes à vous accueillir.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis suscipit facilis minima beatae iste adipisci impedit nobis nemo.</p>
             </div>
         </div>
-        <div class="bloc1">
-            <div class="bloc1__left">
-                <div class="bloc1__left__main">
-                    <div class="visualisation-mode">
-                        <ul>
-                            <li><a href="#" class="active">Liste</a></li>
-                            <li><a href="#">Carte</a></li>
-                        </ul>
-                    </div>
-                    <div class="bloc1__left__main__container">
-                        <p>Filtrer par: </p>
-                        <div class="input input--style-2
-                        input--select">
-                            <select class="input__bloc" name="categories" id="categories">
-                                <option selected disabled>Catégorie</option>
-                                <option value="for_rent">à louer</option>
-                                <option value="for_sale">à vendre</option>
-                            </select>
-                        </div>
-                        <div class="input input--style-2 input--select">
-                            <select class="input__bloc" name="categories" id="categories">
-                                <option selected disabled>Type</option>
-                                <option value="local">Local</option>
-                                <option value="maison">Maison</option>
-                            </select>
-                        </div>
-                        <div class="input input--style-2 input--select">
-                            <select class="input__bloc" name="ville" id="ville">
-                                <option selected disabled>Ville</option>
-                                <option value="kin">Kinshasa</option>
-                                <option value="Kol">Kolwezi</option>
-                                <option value="Lik">Likasi</option>
-                                <option value="Lub">Lubumbashi</option>
-                            </select>
-                        </div>
-                        <div class="input input--style-2 input--select">
-                            <select class="input__bloc" name="quartier" id="quartier">
-                                <option selected disabled>Quartier</option>
-                                <option value="kin">Kinshasa</option>
-                                <option value="Kol">Kolwezi</option>
-                                <option value="Lik">Likasi</option>
-                                <option value="Lub">Lubumbashi</option>
-                            </select>
-                        </div>
-                        <div class="x-large flex-input">
-                            <label for="room_nb" class="">Chambres :</label>
-                            <div>
-                                <input id="room_nb" type="number" class="input__bloc"  min="1" max="10">
-                            </div> 
-                        </div> 
-                        <div class="x-large flex-input">
-                            <label for="min_price" class="">Prix Min($) :</label>
-                            <div>
-                                <input id="min_price" type="number" class="input__bloc"  min="10">
-                            </div> 
-                        </div>
-                        <div class="x-large flex-input">
-                            <label for="min_price" class="">Prix Max($) :</label>
-                            <div>
-                                <input id="max_price" type="number" class="input__bloc"  min="10">
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bloc1__right">
-                <div>
-                    <div class="msg-1">
-                        <i class="fa fa-home fa-3x"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nostrum! Accusamus in consectetur fuga obcaecati odit illo, ipsam.</p>
-                    </div>
-                    <div class="house-container">
-                        <div class="house-container__item" id="item2">
-                            <a href="#">
-                                <span class="house-image">
-                                    <img src="./assets/img/house1.jpg" alt="">
-                                </span>
-                                <ul class="house-infos">
-                                    <li>Maison à Louer</li>
-                                    <li>Kinshasa, Rue Konde/CPA</li>
-                                    <li>860$<sub>/mois</sub> </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="see-more"><a href="#">Voir plus <i class="fa fa-angle-right"></i></a></p>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-    <footer>
-        <div class="footer">
-            <div class="announce-banner">
-                <div class="announce-banner__container">
-                    <h4>Publier votre annonce sur Inzu.com</h4>
-                    <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum enim nam libero, vitae recusandae magni expedita necessitatibus repellat qui repudiandae quisquam impedit non eius labore quidem dolores ea similique ad.
-                    </p>
-                    <button class="i-button">Publier une annonce</button>
-                </div>
-            </div>
-            <div class="footer__container">
-                <span class="footer-logo">
-                    <img src="./assets/img/w-logo.png" alt="">
-                </span>
-                <span class="footer-links">
-                    <ul>
-                        <li>A découvrir</li>
-                        <li><a href="#">First link</a></li>
-                        <li><a href="">Second link</a></li>
-                        <li><a href="">Third link</a></li>
-                        <li><a href="">Fourth link</a></li>
-                    </ul>
-                </span>
-                <span class="footer-form">
-                    <form action="">
-                        <legend>Recevez nos annonces</legend>
-                        <span class="footer-input">
-                            <input class="" type="text" placeholder="Votre Email">
-                            <button>
-                                <i class="fa fa-check"></i>
-                            </button>
-                        </span>
-                    </form>
-                    <span class="footer-contact">
-                        <i class="phone fa fa-mobile-alt"></i>
-                        <ul>
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                +243 979 534 252
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope-open"></i>
-                                inzu@live.fr
-                            </li>
-                        </ul>                  
+    </div>
+    <div class="town-banner container-fluid py-5 px-3 my-5">
+        <h4 class="h4-responsive text-center font-weight-bold">Dans plusieurs villes...</h4>
+        <div class="towns container">
+            <div class="town-item kin">
+                <a href="#">
+                    <span class="town-item-img">
+                        <img src="./assets/img/kin.jpg" alt="">
                     </span>
-                    <span class="footer-social-links">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-github"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    <span class="town-item-text">
+                        <p>Kinshasa</p>
+                        <p>Près de 8000 maisons</p>
                     </span>
-                </span>
+                </a>
             </div>
-            <div class="copyright">
-                <p>Made in DRC |</p>
-                <p>Inzu.com | copyright 2020
-                </p>
+            <div class="town-item">
+                <a href="#">
+                    <span class="town-item-img">
+                        <img src="./assets/img/FB_IMG_15922153162694223.jpg" alt="">
+                    </span>
+                    <span class="town-item-text">
+                        <p>Kigali</p>
+                        <p>Près de 7000 maisons</p>
+                    </span>
+                </a>
             </div>
         </div>
-    </footer>
-    <script src="./Js/jquery-3.3.1.min.js"></script>
-    <script src="./Js/owl.carousel.min.js"></script>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
     <script>
-        for(i=0; i<8; i++){
-            let a = document.getElementById("item"),
-            b = a.cloneNode(true);
-            a.parentNode.appendChild(b);
+        const townBox = document.querySelector('.town-item.kin');
+        for(let i = 0, c = 1; i<=c; i++){
+            const newItem = townBox.cloneNode(true);
+            townBox.parentNode.appendChild(newItem);
         }
-        for(i=0; i<5; i++){
-            let a = document.getElementById("item2"),
-            b = a.cloneNode(true);
-            a.parentNode.appendChild(b);
-        }
+        $(document).ready(()=>$('#loader-box').hide(1000));
     </script>
-    <script type="text/javascript">
-		$('.owl-carousel').owlCarousel({
-			loop:true,
-			margin:30,
-			nav:true,
-			autoplay:true,
-			autoplayTimeout:4000,
-			autoplayHoverPause:true,
-			responsive:{
-			0:{
-					items:1
-			},
-			600:{
-					items:3
-			},
-			1000:{
-					items:4
-			}
-			}
-		})
-	</script>
+    
 </body>
 </html>
