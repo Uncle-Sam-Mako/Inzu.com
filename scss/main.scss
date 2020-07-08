@@ -22,7 +22,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
-	padding: 0 !important;
+	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -51,6 +51,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+button, input:focus{
+    outline: none;
+}
 img{
     width: 100%;
 }
@@ -66,35 +69,48 @@ a, a:hover{
     text-decoration: none !important;
 }
 i{
-    color: inherit !important;
+    color: inherit;
 }
-
+.container-fluid{
+    margin: 0 !important;
+    padding: 0 !important;
+}
 /*=========================================================*/
 
 /*======fonts========*/
 /*====================*/
 
 /*======Variables_start======*/
-$color-primary: #1a80ff;
-$color-secondary : #061e3b;
-$color-third: #eee;
-$color-fourth: #063875;
-$text-color: gray;
+$color-primary: #2196F3;
+$color-secondary : #86c5f9;
+$color-third: #ECEFF1;
+$color-fourth: #042a49;
+$text-color: #607D8B;
 /*============*/
-p, a, i{
+p, a{
     color: $text-color;
     font-size: 0.95em;
 }
 /*========button classes=========*/
 .butn{
     border:none;
-    padding: 5px 10px;
-    transition: background 0.5s ease;
+    padding: 7px 13px;
+    transition: all 0.5s ease;
+    font-size: 0.9em;
     &.butn--primary{
         color: white;
-        background: $color-secondary;
+        background: $color-fourth;
         &:hover{
-            background: $color-fourth;
+            background: $color-secondary;
+        }
+    }
+    &.butn--secondary{
+        height: 100%;
+        color: white;
+        background: $color-fourth;
+        &:hover{
+            background-color: $color-third;
+            color: $text-color;
         }
     }
 }
@@ -104,7 +120,7 @@ p, a, i{
 #loader-box{
     width: 100%;
     height: 100%;
-    background : #eee;
+    background : $color-third;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -124,7 +140,7 @@ p, a, i{
         animation: jumping 1s  infinite;
     }
     .bounce-shadow{
-        background: rgb(168, 168, 168);
+        background: rgb(199, 199, 199);
         width: 80px;
         height: 10px;
         border-radius: 50%;
@@ -186,26 +202,19 @@ p, a, i{
                     margin: 10px 25px;
                     font-size: 0.9em;
                     .nav-link{
-                        color: gray;
+                        color: $text-color;
                         &:hover{
                             color: $color-primary;
                         }
                         &#find-button, #find-button:active{
-                            background-color: $color-primary;
-                            color : white;
-                            height: 100%;
-                            transition : all 0.5s ease-in-out;
-                            &:hover{
-                                background-color: $color-third;
-                                color: gray;
-                            }
+                            
                         }
                     }
                 }
             }
         }
         .nav-connect{
-            justify-self: flex-end;
+            //justify-self: flex-end;
         }
     }
 
@@ -228,14 +237,13 @@ p, a, i{
                     weight: bold;
                 }
                 line-height: 1em;
-                color: $color-secondary;
+                color: $color-fourth;
             }
         }
         
     }
 }
 .town-banner{
-    height: 800px;
     width: 100%;
     background: $color-third;
     .towns{
@@ -256,7 +264,7 @@ p, a, i{
                 p{
                     line-height: 0.5em;
                     &:first-child{
-                        color: $color-secondary;
+                        color: $color-fourth;
                         font:{
                             size: 1.3em;
                             weight: bold;
@@ -267,3 +275,80 @@ p, a, i{
         }
     }
 }
+.find-bar{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 10px #eee;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    div{
+        display: inline-block;
+    }
+    label{
+        display: block;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+        color: $color-primary;
+    }
+    .input-span{
+        display: inline-block;
+        margin : 0 10px;
+        input{
+            padding : 5px 10px;
+            display: block;	
+            position: relative;	
+            border: 1px solid #eee;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    }
+    &-item{
+        margin : auto;
+        i{ 
+            font-size: 1.3em;
+            color: $text-color;
+        }
+        &:first-child{
+            grid-column: 1;
+            position: relative;
+            // &:before{
+            //     content: "";
+            //     width: 100%;
+            //     height: 100%;
+            //     margin : 0;
+            //     display: inline-block;
+            //     position: absolute;
+            //     left: 0;
+            //     border-right: 1px solid #eee;
+            // }
+        }
+        &:last-child{
+            grid-column: 2;
+        }
+    }
+}
+
+
+
+// .input-scan input::after{
+//     content:" ";
+//     position: absolute;	
+//     bottom: 0;
+//     display: block;
+//     background: red;
+//     width: 50px;
+//     height: 10px;
+//     border-top: 2px solid red;
+// }
+// .item::first-child:after{
+//     content: "";
+//     display: inline-block;
+//     height: 50px;
+//     border-left: 1px solid gray;
+// }
