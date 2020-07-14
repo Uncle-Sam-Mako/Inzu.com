@@ -3,23 +3,8 @@
 
 /*Imported fonts
 =================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela&family=Varela+Round&display=swap');
 /*===============*/
-
-/*======Variables_start======*/
-
-$color-primary: #2196F3;
-$color-secondary : #86c5f9;
-$color-third: #ECEFF1;
-$color-fourth: #042a49;
-$text-color: #607D8B;
-$font-primary: 'Roboto', sans-serif;
-$font-secondary: 'Open Sans', sans-serif;
-$font-third: 'Noto Sans', sans-serif;
-
-/*============*/
 
 /*Reset CSS(http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126 License: none (public domain)
 ===========================================================*/
@@ -90,12 +75,18 @@ i{
     margin: 0 !important;
     padding: 0 !important;
 }
-*{
-    font-family: $font-secondary !important;
-}
-/*=============================================*/
+/*=========================================================*/
 
+/*======fonts========*/
+/*====================*/
 
+/*======Variables_start======*/
+$color-primary: #2196F3;
+$color-secondary : #86c5f9;
+$color-third: #ECEFF1;
+$color-fourth: #042a49;
+$text-color: #607D8B;
+/*============*/
 p, a{
     color: $text-color;
     font-size: 0.95em;
@@ -254,7 +245,7 @@ p, a{
 }
 .town-banner{
     width: 100%;
-    background: #fafafa;
+    background: $color-third;
     .towns{
         display: flex;
         .town-item{
@@ -287,6 +278,7 @@ p, a{
 .find-bar{
     width: 80%;
     margin: auto;
+    margin-bottom: 200px;
     border-radius: 5px;
     box-shadow: 0px 0px 20px 10px #eee;
     display: grid;
@@ -325,84 +317,38 @@ p, a{
         &:first-child{
             grid-column: 1;
             position: relative;
+            // &:before{
+            //     content: "";
+            //     width: 100%;
+            //     height: 100%;
+            //     margin : 0;
+            //     display: inline-block;
+            //     position: absolute;
+            //     left: 0;
+            //     border-right: 1px solid #eee;
+            // }
         }
         &:last-child{
             grid-column: 2;
         }
     }
 }
-@keyframes house-img{
-    0%{
-        top:0;
-    }
-    100%{
-        top: -10px;
-    }
-}
-.house-container-1{
-    margin: 50px auto;
-    display: flex;
-    justify-content: center;
-    .house-item{
-        background: white;
-        box-shadow: 0px 0px 5px $color-third;
-        position: relative;
-        box-sizing: border-box;
-        margin: 0 10px;
-        &:after{
-            content: "";
-            display: block;
-            width: 0%;
-            border-top: 2px solid $color-primary;
-            transition: width 0.5s ease;
-            margin: auto;
-        }
-        &:hover{
-            &:after{
-                width: 100%;
-            }
-        }
-        
-        .house-img{
-            display: block;	
-            margin-bottom: 20px;
-        }
-        .house-location{
-            p{
-                line-height: 0.4em;
-                &.house-address{
-                    font-size: 0.8em;
-                    color: rgb(144, 158, 175)
-                }
-            }
-        }
-        .house-more-info{
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .house-price{
-                font-size: 1.4em;
-                color: $color-secondary;
-                sub{
-                    margin-top: -1em
-                }
-            }
-            .house-categorie{
-                color: white;
-                background: $color-fourth;
-                padding: 3px;
-            }
-        }
-        .item-dimension-container{
-            border-top: 1px solid $color-third;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0;
-            padding: 10px 5px;
-            color: $text-color;
-            font-size: 0.9em;
-        }
-    }
-}
+
+
+
+// .input-scan input::after{
+//     content:" ";
+//     position: absolute;	
+//     bottom: 0;
+//     display: block;
+//     background: red;
+//     width: 50px;
+//     height: 10px;
+//     border-top: 2px solid red;
+// }
+// .item::first-child:after{
+//     content: "";
+//     display: inline-block;
+//     height: 50px;
+//     border-left: 1px solid gray;
+// }
