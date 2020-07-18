@@ -29,12 +29,12 @@
     }
 </style>
 <body class="container-fluid">
-    <!-- <div id="loader-box">
+    <div id="loader-box">
         <div class="loader-animation">
     
         </div>
         <div class="bounce-shadow"></div>
-    </div> -->
+    </div>
     <header class="header row">
         <nav class="nav-box mx-auto my-3 col-lg-11">
             <div class="nav-box-container px-2">
@@ -44,9 +44,8 @@
                 <div class="nav-links">
                     <ul>
                         <li><a href="#" class="nav-link">A propos</a></li>
-                        <li><a href="#" class="nav-link">Location</a></li>
-                        <li><a href="#" class="nav-link">Vente</a></li>
                         <li><a href="#" class="nav-link">Contact</a></li>
+                        <li><a href="#" class="nav-link">Déposer une annonce</a></li>
                         <li>
                             <button class="font-weight-bold butn butn--secondary" id="find-button">
                                 <i class="fa fa-search"></i>
@@ -56,7 +55,10 @@
                     </ul>
                 </div>
                 <div class="nav-connect">
-                    <button class="butn butn--secondary">Connectez-vous</button>
+                    <button class="butn butn--secondary">
+                        <i class="fa fa-user"></i>
+                        Connectez-vous
+                    </button>
                 </div>
             </div>
         </nav>
@@ -78,7 +80,7 @@
             <div class="town-item kin">
                 <a href="#">
                     <span class="town-item-img">
-                        <img src="./assets/img/kin.jpg" alt="">
+                        <img class="lazy" data-original="./assets/img/kin.jpg" alt="">
                     </span>
                     <span class="town-item-text">
                         <p>Kinshasa</p>
@@ -89,7 +91,7 @@
             <div class="town-item">
                 <a href="#">
                     <span class="town-item-img">
-                        <img src="./assets/img/kigali.jpg" alt="">
+                        <img class="lazy" data-original="./assets/img/kigali.jpg" alt="">
                     </span>
                     <span class="town-item-text">
                         <p>Kigali</p>
@@ -99,7 +101,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="house-search-container">
         <div class="find-bar">
 			<div class="find-bar-item">
 				<i class="fa fa-map-marker"></i>
@@ -131,68 +133,72 @@
 					</span>
 				</span>
 			</div>
-		</div>
-    </div>
-    <div class="container house-container-1">
-        <div class="house-item col-lg-3">
-            <a href="#">
-                <span class="house-img">
-                    <img src="./assets/img/house2.jpg">
-                </span>
-                <span class="house-location">
-                    <p class="house-name font-weight-bold">Belle Maison à Kigali</p>
-                    <p class="house-address">34 Street, Remera, Kigali</p>
-                </span>
-                <span class="house-more-info">
-                    <p class="house-price font-weight-bold">800$<sub>/mois</sub></p>
-                    <p class="house-categorie">A vendre</p>
-                </span>
-                <span class="item-dimension">
-                    <ul class="item-dimension-container">
-                        <li>
-                            500m<sup>2</sup>
-                        </li>
-                        <li>
-                            <i class="fa fa-bed"></i>
-                            4
-                        </li>
-                        <li>
-                            <i class="fa fa-bath"></i>
-                            2
-                        </li>
-                    </ul>
-                </span>
-            </a>
         </div>
-        <div class="house-item col-lg-3">
-            <a href="#">
-                <span class="house-img">
-                    <img src="./assets/img/house3.jpg">
-                </span>
-                <span class="house-location">
-                    <p class="house-name font-weight-bold">Villa à Kinshasa</p>
-                    <p class="house-address">34 Mobutu, Gombe, Kinshasa</p>
-                </span>
-                <span class="house-more-info">
-                    <p class="house-price font-weight-bold">800$<sub>/mois</sub></p>
-                    <p class="house-categorie">A Louer</p>
-                </span>
-                <span class="item-dimension">
-                    <ul class="item-dimension-container">
-                        <li>
-                            500m<sup>2</sup>
-                        </li>
-                        <li>
-                            <i class="fa fa-bed"></i>
-                            8
-                        </li>
-                        <li>
-                            <i class="fa fa-bath"></i>
-                            4
-                        </li>
-                    </ul>
-                </span>
-            </a>
+        <div class="house-container-controls">
+            <button class="fa fa-chevron-left"></button>
+            <button class="fa fa-chevron-right"></button>
+        </div>
+        <div class="container house-container-1">
+            <div class="house-item col-lg-3">
+                <a href="#">
+                    <span class="house-img">
+                        <img class="lazy" data-original="./assets/img/house2.jpg">
+                    </span>
+                    <span class="house-location">
+                        <p class="house-name font-weight-bold">Belle Maison à Kigali</p>
+                        <p class="house-address">34 Street, Remera, Kigali</p>
+                    </span>
+                    <span class="house-more-info">
+                        <p class="house-price font-weight-bold">800$<sub>/mois</sub></p>
+                        <p class="house-categorie for-sale">A vendre</p>
+                    </span>
+                    <span class="item-dimension">
+                        <ul class="item-dimension-container">
+                            <li>
+                                500m<sup>2</sup>
+                            </li>
+                            <li>
+                                <i class="fa fa-bed"></i>
+                                4
+                            </li>
+                            <li>
+                                <i class="fa fa-bath"></i>
+                                2
+                            </li>
+                        </ul>
+                    </span>
+                </a>
+            </div>
+            <div class="house-item col-lg-3">
+                <a href="#">
+                    <span class="house-img">
+                        <img class="lazy" data-original="./assets/img/house3.jpg">
+                    </span>
+                    <span class="house-location">
+                        <p class="house-name font-weight-bold">Villa à Kinshasa</p>
+                        <p class="house-address">34 Mobutu, Gombe, Kinshasa</p>
+                    </span>
+                    <span class="house-more-info">
+                        <p class="house-price font-weight-bold">800$<sub>/mois</sub></p>
+                        <p class="house-categorie for-rent">A Louer</p>
+                    </span>
+                    <span class="item-dimension">
+                        <ul class="item-dimension-container">
+                            <li>
+                                500m<sup>2</sup>
+                            </li>
+                            <li>
+                                <i class="fa fa-bed"></i>
+                                8
+                            </li>
+                            <li>
+                                <i class="fa fa-bath"></i>
+                                4
+                            </li>
+                        </ul>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
     <div class="announce-banner">
@@ -201,6 +207,7 @@
     </div>
     <script src="./Js/jquery-3.3.1.min.js"></script>
     <script src="./Js/jquery-ui.min.js"></script>
+    <script src="./Js/jquery.lazyload.min.js"></script>
     <script src="./Js/index.js"></script>
     <script>
         document.onload = function(){

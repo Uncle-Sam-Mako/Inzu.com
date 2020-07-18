@@ -60,6 +60,7 @@ img{
 button{
     border: none;
     cursor: pointer;
+    transition: all ease 0.7s;
 }
 body{
     padding: 0;
@@ -85,6 +86,7 @@ $color-primary: #2196F3;
 $color-secondary : #86c5f9;
 $color-third: #ECEFF1;
 $color-fourth: #042a49;
+$color-fifth: #ffb400;
 $text-color: #607D8B;
 /*============*/
 p, a{
@@ -95,7 +97,6 @@ p, a{
 .butn{
     border:none;
     padding: 7px 13px;
-    transition: all 0.5s ease;
     font-size: 0.9em;
     &.butn--primary{
         color: white;
@@ -129,6 +130,7 @@ p, a{
     visibility: visible;
     transition: visibility 0.5s ease-in-out;
     &.hide{
+        animation: fadeOut 1s;
         visibility: hidden;
     }
     .loader-animation{
@@ -172,6 +174,12 @@ p, a{
     }
     100%{
         width: 80px;
+    }
+}
+@keyframes fadeOut{
+    100%{
+        opacity: 0;
+        visibility: hidden;
     }
 }
 /*===========================/*
@@ -274,6 +282,9 @@ p, a{
         }
     }
 }
+.house-search-container{
+    min-height: 100vh;
+}
 .find-bar{
     width: 80%;
     margin: auto;
@@ -322,8 +333,21 @@ p, a{
         }
     }
 }
+.house-container-controls{
+    width: max-content;
+    margin: auto;
+    button{
+        color: $text-color;
+        padding: 7px;
+        margin: 10px;
+        &:hover{
+            color: white;
+            background: $color-fourth;
+        }
+    }
+}
 .house-container-1{
-    margin: 50px auto;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     .house-item{
@@ -356,7 +380,7 @@ p, a{
                 line-height: 0.4em;
                 &.house-address{
                     font-size: 0.8em;
-                    color: rgb(144, 158, 175)
+                    color: #909eaf
                 }
             }
         }
@@ -373,9 +397,15 @@ p, a{
                 }
             }
             .house-categorie{
-                color: white;
-                background: $color-fourth;
                 padding: 3px;
+                &.for-rent{
+                    color: white;
+                    background: $color-fourth;
+                }
+                &.for-sale{
+                    color: $color-fourth;
+                    background: $color-fifth;
+                }
             }
         }
         .item-dimension-container{
@@ -395,14 +425,13 @@ p, a{
     background: url('../assets/img/house4.jpg') center no-repeat;
     background-size: cover;
     position: relative;
-    height: 50vh;
     border-radius : 20% 30%;
     padding: 50px;
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 0;
+    margin: 0;
     text-align: center;
     p{
         color: white;
