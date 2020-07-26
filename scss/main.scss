@@ -26,7 +26,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: Roboto;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -76,6 +77,9 @@ i{
     margin: 0 !important;
     padding: 0 !important;
 }
+ul{
+    width: max-content;
+}
 /*=========================================================*/
 
 /*======fonts========*/
@@ -89,7 +93,7 @@ $color-fourth: #042a49;
 $color-fifth: #ffb400;
 $text-color: #607D8B;
 /*============*/
-p, a{
+p, a, li{
     color: $text-color;
     font-size: 0.95em;
 }
@@ -99,10 +103,14 @@ p, a{
     padding: 7px 13px;
     font-size: 0.9em;
     &.butn--primary{
-        color: white;
-        background: $color-fourth;
+        color: $text-color;
+        background: transparent;
+        border: 2px solid $text-color;
+        border-radius: 50px;
+        font-weight: bold;
         &:hover{
-            background: $color-secondary;
+            border-color: $color-primary;
+            color: $color-primary
         }
     }
     &.butn--secondary{
@@ -210,11 +218,19 @@ p, a{
                     font-size: 0.9em;
                     .nav-link{
                         color: $text-color;
-                        &:hover{
-                            color: $color-primary;
+                        position: relative;
+                        &:hover:before{
+                            background-color: $color-primary;
                         }
-                        &#find-button, #find-button:active{
-                            
+                        &:before{
+                            content: "";
+                            display: inline-block;
+                            width: 8px;
+                            height: 8px;
+                            background: $text-color;
+                            border-radius: 100%;
+                            margin : 0 5px;
+                            transition : all ease 0.5s;
                         }
                     }
                 }
@@ -287,8 +303,8 @@ p, a{
 }
 .find-bar{
     width: 80%;
-    margin: auto;
-    margin-bottom: 80px;
+    margin:25px auto;
+   
     border-radius: 5px;
     box-shadow: 0px 0px 20px 10px #eee;
     display: grid;
@@ -425,7 +441,8 @@ p, a{
     background: url('../assets/img/house4.jpg') center no-repeat;
     background-size: cover;
     position: relative;
-    border-radius : 20% 30%;
+    border-top-left-radius: 30% 20%;
+    border-top-right-radius: 20%  40%;
     padding: 50px;
     display: flex; 
     flex-direction: column;
@@ -437,5 +454,63 @@ p, a{
         color: white;
         font-size: 2em;
         font-weight: bold;
+    }
+}
+.footer{
+    background: url('../assets/img/footer.png') no-repeat;
+    background-position-x: 500%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    .footer-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .footer-item{
+            vertical-align: middle;
+            &.logo{
+                grid-column: 1;
+                display: flex;
+                img{
+                    width: 150px;
+                    align-self: center;
+                }
+            }
+            &.links{
+                grid-column: 2;
+                font-size: 0.95em;
+                ul{
+                    margin: auto;
+                    li{
+                        margin: 10px 0;
+                    }
+            }
+            }
+            &.copyright{
+                grid-column: 3;
+                .social-network{
+                    width: max-content;
+                    margin: 15px auto;
+                    li{
+                        display: inline-block;
+                        margin: 5px 10px;
+                        padding: 8px;
+                        background: $color-fourth;
+                        border-radius: 100%;
+                    }
+                }
+                p{
+                    text-align: center;
+                    &.description{
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 70%;
+                            margin: 15px auto;
+                            border-top: 1px solid #909eaf;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
