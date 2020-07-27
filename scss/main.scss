@@ -77,9 +77,6 @@ i{
     margin: 0 !important;
     padding: 0 !important;
 }
-ul{
-    width: max-content;
-}
 /*=========================================================*/
 
 /*======fonts========*/
@@ -299,12 +296,12 @@ p, a, li{
     }
 }
 .house-search-container{
+    padding : 25px 0;
     min-height: 100vh;
 }
 .find-bar{
     width: 80%;
     margin:25px auto;
-   
     border-radius: 5px;
     box-shadow: 0px 0px 20px 10px #eee;
     display: grid;
@@ -459,7 +456,7 @@ p, a, li{
 .footer{
     background: url('../assets/img/footer.png') no-repeat;
     background-position-x: 500%;
-    height: 300px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     .footer-items{
@@ -479,11 +476,12 @@ p, a, li{
                 grid-column: 2;
                 font-size: 0.95em;
                 ul{
+                    width: max-content;
                     margin: auto;
                     li{
                         margin: 10px 0;
                     }
-            }
+                }
             }
             &.copyright{
                 grid-column: 3;

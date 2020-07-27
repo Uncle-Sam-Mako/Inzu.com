@@ -48,10 +48,10 @@
                         <li><a href="#" class="nav-link">Contact</a></li>
                         <li><a href="#" class="nav-link">Déposer une annonce</a></li>
                         <li>
-                            <button class="butn butn--primary" id="find-button">
+                            <a class="butn butn--primary" id="find-button" href="#house-container">
                                 <i class="fa fa-search"></i>
                                 Trouver une maison
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -102,7 +102,7 @@
             </div>
         </div>
     </div>
-    <div class="house-search-container">
+    <div class="house-search-container" id="house-container">
         <div class="find-bar">
 			<div class="find-bar-item">
 				<i class="fa fa-map-marker"></i>
@@ -243,14 +243,12 @@
             </div>
         </div>
     </footer>
-    <script src="./Js/jquery-3.3.1.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./Js/jquery-ui.min.js"></script>
     <script src="./Js/jquery.lazyload.min.js"></script>
     <script src="./Js/index.js"></script>
     <script>
-        document.onload = function(){
-            $("#loader-box").hide(1000);
-        }
+        
     </script>
 </body>
 </html>
