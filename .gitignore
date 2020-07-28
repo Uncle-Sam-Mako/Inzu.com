@@ -1,7 +1,6 @@
-form.html
-ripple.html
-jquery-3.3.1.min.js
 jquery-ui.min.js
 bootstrap.min.css
 fonts/
-font-awesome/
+fontawesome-free-5.14.0-web
+node_modules
+
