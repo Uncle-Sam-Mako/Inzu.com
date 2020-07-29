@@ -21,12 +21,12 @@
 <style>
     .ui-widget-content{
         box-shadow: 0px 0px 10px #ddd;
-		border: 1px solid #86c5f9;
+        border: none !important;
 		border-radius: 10px;
 		font-family: Roboto;
 		font-size: 0.85em;
         color: gray;
-        background: rgba(255, 255, 255, 0.8);
+        background: white;
     }
 </style>
 <body class="container-fluid">
@@ -201,7 +201,7 @@
                 </a>
             </div>
         </div>
-        <div class="text-center advanced-search my-4"><a href="#" class="butn butn--primary">Recherche avancée</a></div>
+        <div class="text-center advanced-search my-4"><a href="search.html" class="butn butn--primary">Recherche avancée</a></div>
     </div>
     <div class="announce-banner">
         <p>Publiez votre annonce sur Inzu.com et dites bonjour aux nouveaux clients!</p>
@@ -243,7 +243,14 @@
     <script src="./Js/jquery.lazyload.min.js"></script>
     <script src="./Js/index.js"></script>
     <script>
-        
+        const house = document.querySelector('.house-item');
+        const townBox = document.querySelector('.town-item.kin');
+        for(let i = 0, c = 1; i<=c; i++){
+            const newHouse = house.cloneNode(true);
+            const newItem = townBox.cloneNode(true);
+            townBox.parentNode.appendChild(newItem);
+            house.parentNode.appendChild(newHouse);
+        }
     </script>
 </body>
 </html>
