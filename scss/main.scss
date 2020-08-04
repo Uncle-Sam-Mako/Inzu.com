@@ -93,7 +93,7 @@ $color-fourth: #042a49;
 $color-fifth: #ffb400;
 $text-color: #607D8B;
 /*============*/
-p, a, li{
+p, a, li, label{
     color: $text-color;
     font-size: 0.95em;
 }
@@ -564,31 +564,62 @@ html, body, p, a, li, span, i{
     
 }
 .filters{
-    //display: ;
+    box-shadow: 0px 0px 5px #eee;
     font-size: 0.85em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; 
-
-   // flex-wrap: wrap;
-    span, .more-filter a{
-        text-align: center;
-        display: inline-block;
-        min-width: 100px;
-        padding: 5px 10px;
-        margin: 10px 0px;
-        &.filter input{
-            border: 1px solid $color-primary;
-            border-radius: 0px;
+    div.main-filters{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; 
+        margin: 10px auto;
+        span{
             text-align: center;
-            color: $color-fourth;
-            padding: 5px 10px;
+            display: inline-block;
+            width: 13%;
+            margin: 10px 0px;
+            &.filter{
+                position: relative;
+                &>button{
+                    border: 1px solid $color-primary;
+                    border-radius: 0px;
+                    text-align: center;
+                    color: $color-fourth;
+                    padding: 5px 10px;
+                }
+                .sub-input{
+                    position: absolute;
+                    left: 0%;
+                    background: #fff;
+                    padding: 10px;
+                    box-shadow: 0px 0px 8px 5px #ddd;
+                    margin-top: 10px;
+                    &.range{
+                        form{
+                            display: flex;
+                            input{
+                                padding: 5px;
+                                border: 1px solid #ddd;
+                                margin: 10px;
+                                &:focus{
+                                    border-color: $color-primary;
+                                }
+                            }
+                        }
+
+                    } 
+                    
+                    
+                }
+            }
         }
-        &.more-filter a{
-            background: $color-secondary;
-            width: 100%;
-            height: 100%;
+    }
+    div.more-filters{
+        padding: 10px 20px;
+        span{
+            margin: 10px;
+            input{
+                vertical-align: middle;
+            }
         }
     }
 }
