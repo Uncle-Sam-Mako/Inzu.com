@@ -39,8 +39,6 @@ $(document).ready(function(){
                 scrollTop: elemTop
             }, "fast");
         }
-
     });
-    
-
 });
+//dropdown
