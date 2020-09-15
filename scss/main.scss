@@ -217,6 +217,9 @@ nav{
     display: block;
     width: 100%;
     padding: 10px;
+    .navbar-toggler{
+        border: none;
+    } 
     .navbar-collapse{
         justify-content: space-around;
         align-items: center;
@@ -271,7 +274,7 @@ nav{
         .town-item{
             margin : 5px;
             height: max-content;
-            width: 300px;
+            //width: 300px;
             &-img{
                 transition: filter 0.5s ease-in-out;
                 &:hover{
@@ -304,14 +307,8 @@ nav{
     margin:25px auto;
     border-radius: 5px;
     box-shadow: 0px 0px 20px 10px #eee;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
     padding: 20px;
     font-size: 0.9em;
-    div{
-        display: inline-block;
-    }
     label{
         display: block;
         font-size: 0.6em;
@@ -326,7 +323,6 @@ nav{
         input{
             padding : 5px 10px;
             display: block;	
-            position: relative;	
             border: 1px solid #eee;
             border-radius: 5px;
             font-size: 0.9em;

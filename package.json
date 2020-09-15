@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/main.scss:./css/style.css --style compressed"
+    "sass": "sass --watch ./scss/main.scss:./css/style.css --style compressed",
+    "sass": "sass --watch ./scss/mobile.scss:./css/mobile.css --style compressed"
   },
   "author": "uncle sam",
   "license": "ISC",
