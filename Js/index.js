@@ -41,4 +41,13 @@ $(document).ready(function(){
         }
     });
 });
-//dropdown
+//Carousel
+
+document.addEventListener( 'DOMContentLoaded', function () {
+	var primarySlider = new Splide( '#primary-slider', {
+        type       : 'fade',
+        rewind     : true,
+		pagination : true,
+		arrows     : false,
+	} ).mount();;
+} );
