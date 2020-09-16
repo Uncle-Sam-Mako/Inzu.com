@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inzu.com - Accueil</title>
+    <title>Ajouter une maison</title>
     <meta name="description" content="Site immobilier, location et achat des maisons et locaux. Trouvez des maisons à louer ou à acheter dans plusieurs villes.">
     <link rel="icon" href="./assets/img/ico.png">
     <link rel="stylesheet" href="./css/owl.carousel.css">
@@ -20,17 +20,11 @@
     
 </head>
 <style>
-    .ui-widget-content{
-        box-shadow: 0px 0px 10px #ddd;
-        border: none !important;
-		border-radius: 10px;
-		font-family: Roboto;
-		font-size: 0.85em;
-        color: gray;
-        background: white;
+    body{
+        background: #fafafa;
     }
 </style>
-<body class="">
+<body class="" style="margin-top: 100px;">
     <div id="loader-box">
         <div class="loader-animation">
     
@@ -38,7 +32,7 @@
         <div class="bounce-shadow"></div>
     </div>
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,12 +72,51 @@
             </div>
         </nav>
     </header>
+    <section class="container">
+        <div class="col-lg-8 px-lg-5 py-3 my-3 main-section mx-auto">
+            <h3 class="h3-responsive text-center my-3 font-weight-bold">Ajouter une maison</h3>
+            <div class="import-img">
+                <div class="img-container"> 
+                    <div class="img-item">
+                        <span class="img-square text-center">
+                            <label for="file" class="label-file">Importer une photo</label>
+                            <input id="file" class="input-file last" type="file">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
+    
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
     <script src="./Js/jquery-ui.min.js"></script>
     <script src="./Js/jquery.lazyload.min.js"></script>
     <script src="./Js/index.js"></script>
     <script>
+       $(document).ready(function(){
+        function addImg(){
+            const img = document.querySelector('.img-item');
+            let newImg = document.createElement('div');
+            newImg.className ="img-item";
+            newImg.innerHTML='<span class="img-square"><label for="file" class="label-file">Importer une photo</label><input id="file" class="input-file last" type="file"></span>';
+            img.parentNode.appendChild(newImg);
+       }
+        
+        var inputFile = document.querySelectorAll('.input-file.last');
+        var inputNumber = inputFile.length;
+        for(var i = 0; i<=inputNumber; i++){
+            inputFile[i].change(function(e){
+                var fileName = inputFile.files[0].name;
+                inputFile[i].previousElementSibling.innerHTML = '<i class="fas fa-image fa-3x"></i><br>' + fileName;
+                addImg();
+                e.target.removeClass('last');
+            });
+        }
+       });
+    </script>
+
     </body>
     </html>
