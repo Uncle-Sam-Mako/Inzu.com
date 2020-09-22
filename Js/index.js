@@ -29,7 +29,7 @@ $(document).ready(function(){
         moreFilters.slideToggle('fast');
     });
     //ancre-fluide
-    $('a[href^="#"]').on('click', function(e){
+    $('a[href^="#"].ancre').on('click', function(e){
         e.preventDefault();
         let link = $(this).attr('href'),
         elem = $(link);

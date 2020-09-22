@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A propos de Inzu.com</title>
+    <title>Inscrivez-vous</title>
     <meta name="description" content="Site immobilier, location et achat des maisons et locaux. Trouvez des maisons à louer ou à acheter dans plusieurs villes.">
     <link rel="icon" href="./assets/img/ico.png">
     <link rel="stylesheet" href="./css/owl.carousel.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
@@ -18,7 +19,12 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     
 </head>
-<body class="" style="background: #f9f9f9;">
+<style>
+    body{
+        background: #fafafa;
+    }
+</style>
+<body class="" style="margin-top: 100px;">
     <div id="loader-box">
         <div class="loader-animation">
     
@@ -40,7 +46,7 @@
                     <ul class="navbar-nav mt-2 mt-lg-0">
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="add_house_first.html">Déposer une annonce</a>
+                            <a class="nav-link" href="">Déposer une annonce</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -57,7 +63,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link butn butn--secondary" href="login.html">
+                            <a class="nav-link butn butn--secondary" href="about.html">
                                <i class="fa fa-user"></i> Connectez-vous
                             </a>
                         </li>
@@ -66,50 +72,47 @@
             </div>
         </nav>
     </header>
-
-    <section class="about-section my-5 mx-lg-5 py-4 mx-4">
-        <div class="container">
-            <h2 class="h2-responsive text-center font-weight-bold my-5">Qui sommes-nous ?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus ipsam voluptates culpa, mollitia vitae harum nesciunt non aperiam quibusdam soluta facilis quisquam dolor eum. Fugiat, sit. Perspiciatis, laborum commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit alias ea tenetur, consequatur, fugiat explicabo error dicta eligendi porro, dolorum quam. Quidem quasi aperiam saepe nostrum nihil vel nulla. Doloremque?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aspernatur quis corrupti quod, odit illum minus ut autem ullam magni est cumque itaque. Corporis esse officiis perferendis provident accusantium soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis reiciendis ipsam esse explicabo expedita ea eaque eligendi.</p>
-
+    <section class="container">
+        <div class="col-lg-8 px-lg-5 py-3 my-3 main-section mx-auto">
+            <h3 class="h3-responsive text-center my-3 font-weight-bold">Inscrivez-vous</h3>
+            <form action="">
+                <input class="ipt ipt-wow" id="userName" type="text" placeholder="Votre nom complet" required>
+                <input class="ipt ipt-wow" id="userEmail" type="email" placeholder="Votre adresse email" required>
+                <span class="row">
+                    <span class="col">
+                        <select class="ipt ipt-wow" name="houseType" id="userGen" required>
+                            <option value="placeholder" selected disabled>Genre</option>
+                            <option value="userWoman">Femme</option>
+                            <option value="userMan">Homme</option>
+                            <option value="userOther">Autre</option>
+                        </select>
+                    </span>
+                    <span class="col">
+                        <input class="ipt ipt-wow" id="userBirthday" type="date" placeholder="Date de naissance">
+                    </span>
+                </span>
+                <span class="row">
+                    <span class="col">
+                        <input class="ipt ipt-wow" id="userPassword" type="password" placeholder="Mot de passe" required>
+                    </span>
+                    <span class="col">
+                        <input class="ipt ipt-wow" id="userPasswordConfirm" type="password" placeholder="Confirmer mot de passe" required>
+                    </span>
+                </span>
+                <input type="submit" class="butn butn--secondary" value="Suivant">
+            </form>
         </div>
-
+        <span class="text-center">
+            <p>J'ai déjà un compte, <a href="login.html">Me connecter</a></p>
+        </span>
     </section>
 
-    <!-- <footer>
-        <div class="footer">
-            <div class="container">
-                <div class="footer-items">
-                    <span class="footer-item logo">
-                        <img src="./assets/img/logo.png" alt="inzu-logo">
-                    </span>
-                    <span class="footer-item links">
-                        <ul>
-                            <li class="font-weight-bold">Liens</li>
-                            <li><a href="#">A propos</a></li>
-                            <li><a href="#">Contactez-nous</a></li>
-                            <li><a href="#">Confidentialité</a></li>
-                            <li><a href="#">Conditions d'utilisation</a></li>
-                            <li><a href="#">Aide</a></li>
-                        </ul>
-                    </span>
-                    <span class="footer-item copyright">
-                        <ul class="social-network">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus vitae quis ullam autem minus aut nulla. Possimus vitae quis ullam autem minus aut nulla.
-                        </p>
-                        <p>Inzu.com - ©Copyright 2020</p>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </footer> -->
+    
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
     <script src="./Js/jquery-ui.min.js"></script>
     <script src="./Js/jquery.lazyload.min.js"></script>
     <script src="./Js/index.js"></script>
-    <script>
+
+    </body>
+    </html>

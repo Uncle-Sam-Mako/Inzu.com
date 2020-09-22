@@ -35,8 +35,8 @@
         </div>
         <div class="bounce-shadow"></div>
     </div> -->
-    <header class="header row">
-        <nav class="navbar navbar-expand-lg navbar-light">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
                     <ul class="navbar-nav mt-2 mt-lg-0">
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="">Déposer une annonce</a>
+                            <a class="nav-link" href="add_house_first.html">Déposer une annonce</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -62,12 +62,12 @@
                     </ul>
                     <ul class="nav-button mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link butn butn--primary" href="about.html">
+                            <a class="nav-link butn butn--primary" href="#house-container">
                                <i class="fa fa-search"></i> Trouver une maison
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link butn butn--secondary" href="about.html">
+                            <a class="nav-link butn butn--secondary" href="login.html">
                                <i class="fa fa-user"></i> Connectez-vous
                             </a>
                         </li>
@@ -93,48 +93,91 @@
             <div class="main-filters">
                 <span class="filter">
                     <span>
-                        <input type="text" placeholder="Ville">
+                        <input class="ipt ipt-wow" id="town" type="text" placeholder="Ville">
                     </span>
                 </span>
                 <span class="filter">
+                    <select class="ipt ipt-wow" name="houseType" id="houseType" required>
+                        <option value="placeholder" selected disabled>Type de maison</option>
+                        <option value="simple">Maison simple</option>
+                        <option value="appart">Appartement</option>
+                    </select>
+                </span>
+                <span class="filter">
                     <span class="col"> 
-                        <input type="number" min="1" placeholder="Prix min">
+                        <input class="ipt ipt-wow" type="number" min="1" placeholder="Prix min">
                     </span>
                     <span class="col"> 
-                        <input type="number" min="1" placeholder="Prix Max">
+                        <input class="ipt ipt-wow" type="number" min="1" placeholder="Prix Max">
                     </span>
                 </span>
                 <span class="active-more-filters ml-auto">
                     <button id="more-filters-btn" class="butn butn--secondary"><i class="fa fa-angle-down"></i> Plus de filtres</button>
                 </span>
             </div>
-            <div class="more-filters">
-                <div>
-                    
-                </div>
-
-
-                <form action="">
-                    <span>
-                        <input type="checkbox" name="pool" id="pool">
-                        <label for="pool"><i class="fa fa-swimming-pool"></i>Piscine</label>
-                    </span>
-                    <span>
-                        <input type="checkbox" name="garden" id="garden">
-                        <label for="garden"><i class="fa fa-tree"></i>Jardin</label>
-                    </span>
-                    <span>
-                        <input type="checkbox" name="Garage" id="Garage">
-                        <label for="Garage"><i class="fa fa-car-side"></i>Garage</label>
-                    </span>
-                    <span>
-                        <input type="checkbox" name="fireplace" id="fireplace">
-                        <label for="fireplace"><i class="fa fa-fire"></i>Cheminée</label>
-                    </span>
-                    <span>
-                        <input type="checkbox" name="climatisation" id="climatisation">
-                        <label for="climatisation"><i class="fa fa-snowflake"></i>Climatisation</label>
-                    </span>
+            <div class="more-filters mt-4">
+                <h4 class="title">Autres filtres</h4>
+                <form action="#">
+                    <div class="filter-row">
+                        <span class="filter">
+                            <label for="bedsNumberMin">Chambres</label>
+                            <span class="col"> 
+                                <input class="ipt ipt-wow" type="number" min="1" id="bedsNumberMin" placeholder="Nb Min">
+                            </span>
+                            <span class="col"> 
+                                <input class="ipt ipt-wow" type="number" min="1" id="bedsNumberMax" placeholder="Nb Max">
+                            </span>
+                        </span>
+                        <span class="filter">
+                            <label for="yearBluidMin">Année de construction</label>
+                            <span class="col"> 
+                                <input class="ipt ipt-wow" type="number" min="1" id="yearBluidMin" placeholder="Min">
+                            </span>
+                            <span class="col"> 
+                                <input class="ipt ipt-wow" type="number" max="2020" id="bedsNumberMax" placeholder="Max">
+                            </span>
+                        </span>
+                        <span class="filter">
+                            <label for="yearBluidMin">Taille de la maison (en m²)</label>
+                            <span class="col"> 
+                                <input class="ipt ipt-wow" type="number" min="1" id="houseSurfaceMin" placeholder="Min">
+                            </span>
+                            <span class="col"> 
+                                <input class="ipt ipt-wow" type="number" id="houseSUrfaceMax" placeholder="Max">
+                            </span>
+                        </span>
+                        <span class="filter checkboxes">
+                            <span class="col"> 
+                                <input type="checkbox" id="pool">
+                                <label for="pool">Piscine</label>
+                            </span>
+                            <span class="col"> 
+                                <input type="checkbox" id="garden">
+                                <label for="garden">Jardin</label>
+                            </span>
+                        </span>
+                        <span class="filter checkboxes">
+                            <span class="col"> 
+                                <input type="checkbox" id="garage">
+                                <label for="garage">Garage</label>
+                            </span>
+                            <span class="col"> 
+                                <input type="checkbox" id="attic">
+                                <label for="attic">Grenier</label>
+                            </span>
+                        </span>
+                        <span class="filter checkboxes">
+                            <span class="col"> 
+                                <input type="checkbox" id="stairs">
+                                <label for="stairs">En étage</label>
+                            </span>
+                            <span class="col"> 
+                                <input type="checkbox" id="chimney">
+                                <label for="chimney">Cheminée</label>
+                            </span>
+                        </span>
+                        
+                    </div>
                 </form>
             </div>
         </div>
