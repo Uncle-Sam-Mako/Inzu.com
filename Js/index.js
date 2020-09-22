@@ -43,11 +43,43 @@ $(document).ready(function(){
 });
 //Carousel
 
-document.addEventListener( 'DOMContentLoaded', function () {
-	var primarySlider = new Splide( '#primary-slider', {
+     document.addEventListener( 'DOMContentLoaded', function () {
+    var secondarySlider = new Splide( '#secondary-slider', {
+        fixedWidth  : 100,
+        height      : 60,
+        gap         : 10,
+        cover       : true,
+        isNavigation: true,
+        pagination : false,
+        arrows : false,
+        focus       : 'center',
+        breakpoints : {
+            '600': {
+                fixedWidth: 66,
+                height    : 40,
+                arrows : true,
+            }
+        },
+    } ).mount();
+    
+    var primarySlider = new Splide( '#primary-slider', {
         type       : 'fade',
+        height     : 400,
         rewind     : true,
-		pagination : true,
-		arrows     : false,
-	} ).mount();;
+        cover      : true,
+        pagination : false,
+        arrows     : false,
+        breakpoints : {
+            600 : {
+                height : 200
+            },
+            768 : {
+                height : 300
+            }
+        }
+    } );
+    primarySlider.sync( secondarySlider ).mount();
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        primarySlider.arrows = true;
+    }
 } );
