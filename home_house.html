@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
     <link rel="stylesheet" href="./css/jquery-ui.min.css">    
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/47fc11e9b5.js" crossorigin="anonymous"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 
@@ -189,54 +190,11 @@
         </div>
     </div>
 
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
-    <script src="./Js/jquery-ui.min.js"></script>
+    <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
+<!--     <script src="./bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+ -->    <script src="./Js/jquery-ui.min.js"></script>
     <script src="./Js/jquery.lazyload.min.js"></script>
     <script src="./Js/index.js"></script>
     <script src="./splide-2.4.12/dist/js/splide.min.js"></script>
-    <script>
-        document.addEventListener( 'DOMContentLoaded', function () {
-	var secondarySlider = new Splide( '#secondary-slider', {
-		fixedWidth  : 100,
-		height      : 60,
-		gap         : 10,
-		cover       : true,
-		isNavigation: true,
-        pagination : false,
-        arrows : false,
-		focus       : 'center',
-		breakpoints : {
-			'600': {
-				fixedWidth: 66,
-                height    : 40,
-                arrows : true,
-			}
-		},
-	} ).mount();
-	
-	var primarySlider = new Splide( '#primary-slider', {
-		type       : 'fade',
-        height     : 400,
-        rewind     : true,
-        cover      : true,
-		pagination : false,
-		arrows     : false,
-        breakpoints : {
-            600 : {
-                height : 200
-            },
-            768 : {
-                height : 300
-            }
-        }
-	} );
-    primarySlider.sync( secondarySlider ).mount();
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        primarySlider.arrows = true;
-    }
-} );
-
-    </script>
     </body>
     </html>
